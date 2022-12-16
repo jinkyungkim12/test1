@@ -1,42 +1,54 @@
 <template>
   <div id="app">
-    <MainHeader />
-    <MainList />
+    <!-- header s -->
+    <div class="mainHeader">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <router-link to="/"><i class="fa-solid fa-w text-warning"></i> WithNetWorks</router-link>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <router-link to="/">Home</router-link>
+                  <router-link to="/boardList">Board</router-link>
+                  <router-link to="/productList">Product</router-link>
+                  <router-link to="/memberLogin">Login</router-link>
+                </ul>
+                <form class="d-flex">
+                  <router-link to="/signIn"><button type="button" class="btn btn-outline-dark">Sign In</button></router-link>
+                </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header e -->
+
+    <!-- content s -->
+    <router-view/>
+    <!-- content e -->
+
+    <!-- footer s -->
     <MainFooter />
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/> -->
+    <!-- footer e -->
   </div>
 </template>
 
 <script>
-import MainHeader from '@/components/MainHeader.vue'
-import MainFooter from '@/components/MainFooter.vue'
-import MainList from '@/components/MainList.vue'
-  
-  export default {
-    components: {
-      MainHeader,
-      MainFooter,
-      MainList
-    },
-    // data(){
-    //   return {
-    //     name: '코지코더'
-    //   }
-    // }    
-  }
+import MainFooter from './components/MainPage/MainFooter.vue';
 
+export default {
+    components: {
+      MainFooter,
+    },
+  }
 </script>
 
 <style>
 #app {
   font-family: 'GmarketSansMedium';
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialisased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 @font-face {
@@ -46,16 +58,17 @@ import MainList from '@/components/MainList.vue'
     font-style: normal;
 }
 
-nav {
-  padding: 30px;
-}
-
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: #111214;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+a:hover{
+  color: #626266db;
+}
+
+a {
+    animation: none;
+    text-decoration: none;
+    padding-right: 20px;
 }
 </style>

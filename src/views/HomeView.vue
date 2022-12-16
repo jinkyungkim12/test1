@@ -1,15 +1,15 @@
 <template>
   <div>
-    <main-header />
+    <MainHome />
   </div>
 </template>
 
 <script>
-import MainHeader from '../components/MainHeader.vue'
-
+import MainHome from '@/components/MainPage/MainHome.vue'
+  
   export default {
     components: {
-      MainHeader,
+      MainHome,
     },
     // data(){
     //   return {
