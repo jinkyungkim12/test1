@@ -27,7 +27,7 @@
             </div>
             <div class="col-md-8 col-sm-6">
                 <h2>{{ productName }}</h2>
-                <h4 class="price"><strong>{{ price }}</strong></h4>
+                <h4 class="price"><s><strong>{{ price }}</strong></s>&nbsp;&nbsp; <strong class="text-danger">{{ dcPrice }}</strong></h4> 
                 <hr>
                 <p>{{ productInfo }}</p>
                 <span class="label label-default shipping text-success">무료배송</span>
@@ -126,6 +126,8 @@ export default{
             productInfo: 
                 `This blazer in suede is a must-have of your wardrobe.
                 Team it with a angora blazer and a angora sweater.`,
+            price: '100,000 원',
+            dcPrice: '70,000 원'
         }
     }
 }

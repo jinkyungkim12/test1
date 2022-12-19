@@ -71,16 +71,16 @@ export default{
         return {
             productName1: 'Laptop 1',
             productContents1: 'This is a limited edition.',
-            price1: '3.520 $',
-            dcPrice1: '3.000 $',
+            price1: '100,000 원',
+            dcPrice1: '70,000 원',
             productName2: 'Laptop 2',
             productContents2: 'This is a limited edition.',
-            price2: '2.675 $',
-            dcPrice2: '2.000 $',
+            price2: '200,000 원',
+            dcPrice2: '180,000 원',
             productName3: 'Tablets',
             productContents3: 'This is a limited edition.',
-            price3: '2.675 $',
-            dcPrice3: '2.000 $',
+            price3: '300,000 원',
+            dcPrice3: '270,000 원',
         }
     }
 }

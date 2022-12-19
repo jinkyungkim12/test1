@@ -6,8 +6,8 @@
           <div class="card-body">
             <h2 class="card-title mb-5">Login</h2>
             <div class="mb-4 text-start">
-              <label for="exampleFormControlInput1" class="form-label">Email Address</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <label for="exampleFormControlInput1" class="form-label">Id</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="id">
             </div>
             <div class="mb-3 text-start">
               <label for="exampleFormControlInput2" class="form-label">Password</label>

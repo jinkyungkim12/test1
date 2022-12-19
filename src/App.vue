@@ -16,7 +16,7 @@
                   <router-link to="/memberLogin">Login</router-link>
                 </ul>
                 <form class="d-flex">
-                  <router-link to="/signIn"><button type="button" class="btn btn-outline-dark">Sign In</button></router-link>
+                  <router-link to="/signIn"><button type="button" class="btn btn-outline-dark">Sign Up</button></router-link>
                 </form>
                 </div>
             </div>
@@ -56,6 +56,7 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
+
 
 nav a {
   color: #111214;

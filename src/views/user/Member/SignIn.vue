@@ -5,13 +5,17 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <img src="https://images.unsplash.com/photo-1661956602926-db6b25f75947?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80" class="img-fluid rounded-start">
+                            <img src="https://images.unsplash.com/photo-1511933801659-156d99ebea3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="img-fluid rounded-start">
                         </div>
                         <div class="col-8">
                             <h2 class="card-title mb-5 text-center">Sign up</h2>
                             <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Profile Image</label>
+                                    <input class="form-control" type="file" id="input-image" name="postImage">
+                                </div>
                                 <div class="col-6">
-                                    <div class="mb-4 text-start">
+                                    <div class="mb-3 text-start">
                                         <label for="exampleFormControlInput1" class="form-label">Id</label>
                                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="id">
                                     </div>
@@ -216,8 +220,13 @@ export default{
     .loginButton{
         width: 97%;
     }
-
     .img-fluid{
-        height: 800px;
+        height: 100%;
     }
+    .profile{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: rgb(209, 204, 204);
+	}
 </style>
