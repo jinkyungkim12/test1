@@ -108,11 +108,18 @@
             <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
             <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
         </section>
+        <ProductComments />
     </div>
 </template>
 
 <script>
+import ProductComments from '@/components/Comments/ProductComments.vue';
+
 export default{
+
+    components: {
+        ProductComments
+    },
     data(){
         return {
             productName: 'Laptop 1',

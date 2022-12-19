@@ -11,6 +11,16 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/mainHome',
+    name: 'mainHome',
+    component: () => import('@/views/MainView.vue')
+  },
+  {
+    path: '/mainView',
+    name: 'mainView',
+    component: () => import('@/views/MainView.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
@@ -21,12 +31,17 @@ const routes = [
   {
     path: '/boardList',
     name: 'boardList',
-    component: () => import('@/components/Board/BoardList.vue')
+    component: () => import('@/views/user/Board/BoardList.vue')
   },
   {
     path: '/boardView',
     name: 'boardView',
-    component: () => import('@/components/Board/BoardView.vue')
+    component: () => import('@/views/user/Board/BoardView.vue')
+  },
+  {
+    path: '/boardCreate',
+    name: 'boardCreate',
+    component: () => import('@/views/user/Board/BoardCreate.vue')
   },
   {
     path: '/boardComments',
@@ -36,22 +51,27 @@ const routes = [
   {
     path: '/memberLogin',
     name: 'memberLogin',
-    component: () => import('@/components/Member/MemberLogin.vue')
+    component: () => import('@/views/user/Member/MemberLogin.vue')
   },
   {
     path: '/productList',
     name: 'productList',
-    component: () => import('@/components/Product/ProductList.vue')
+    component: () => import('@/views/user/Product/ProductList.vue')
   },
   {
     path: '/productView',
     name: 'productView',
-    component: () => import('@/components/Product/ProductView.vue')
+    component: () => import('@/views/user/Product/ProductView.vue')
+  },
+  {
+    path: '/productCreate',
+    name: 'productCreate',
+    component: () => import('@/views/user/Product/ProductCreate.vue')
   },
   {
     path: '/signIn',
     name: 'signIn',
-    component: () => import('@/components/Member/SignIn.vue')
+    component: () => import('@/views/user/Member/SignIn.vue')
   } 
 ]
 

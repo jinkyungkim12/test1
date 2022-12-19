@@ -11,11 +11,6 @@ import MainHome from '@/components/MainPage/MainHome.vue'
     components: {
       MainHome,
     },
-    // data(){
-    //   return {
-    //     name: '코지코더'
-    //   }
-    // }    
   }
 
 </script>

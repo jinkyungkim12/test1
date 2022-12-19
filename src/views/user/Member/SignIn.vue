@@ -13,13 +13,25 @@
                                 <div class="col-6">
                                     <div class="mb-4 text-start">
                                         <label for="exampleFormControlInput1" class="form-label">Id</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="id">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3 text-start">
                                         <label for="exampleFormControlInput2" class="form-label">Name</label>
                                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3 text-start">
+                                        <label for="exampleFormControlInput2" class="form-label">Nickname</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nickname">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3 text-start">
+                                        <label for="exampleFormControlInput2" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="010-1234-1234">
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -52,8 +64,54 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-4 text-start">
-                                        <label for="exampleFormControlInput2" class="form-label">Phone</label>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="01012341234">
+                                        <label for="exampleFormControlInput2" class="form-label">Email</label>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="aaa@example.com">
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">인증하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 이메일 인증 모달 -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">이메일 인증하기</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <label for="exampleFormControlInput2" class="form-label">Email</label>
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <button type="button" class="btn btn-dark">인증하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <label for="exampleFormControlInput2" class="form-label">Email 인증번호 입력</label>
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="123456">
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <button type="button" class="btn btn-dark">인증완료</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                                <button type="button" class="btn btn-dark">확인</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -160,6 +218,6 @@ export default{
     }
 
     .img-fluid{
-        height: 703px;
+        height: 800px;
     }
 </style>

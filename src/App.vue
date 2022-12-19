@@ -22,8 +22,7 @@
             </div>
         </nav>
     </div>
-    <!-- header e -->
-
+    
     <!-- content s -->
     <router-view/>
     <!-- content e -->
