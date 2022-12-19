@@ -5,9 +5,9 @@
             <div class="col-md-4">
                 <div class="card card-product card-plain shadow p-3 mb-5 bg-body rounded border border-0">
                     <div class="card-image">
-                        <a href="#paper-kit">
+                        <router-link to="/productView">
                             <img src="https://images.unsplash.com/photo-1547731030-cd126f44e9c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29tcHV0ZXJ8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Rounded Image" class="img-fluid rounded img-responsive">
-                        </a>
+                        </router-link>
                         <div class="card-body">
                             <div class="card-description">
                                 <h5 class="card-title">{{ productName1 }}</h5>

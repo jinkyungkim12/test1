@@ -22,6 +22,9 @@
                     <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.</p>
                 </section>
             </article>
+            <div class="col text-center mt-5 mb-5">
+                <button class="btn btn-outline-success rounded-5 btn-lg" type="button">Like <i class="fa-solid fa-thumbs-up"></i></button>
+            </div>
         </div>
         <BoardComments />
     </div>
