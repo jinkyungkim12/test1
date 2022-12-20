@@ -72,7 +72,52 @@ const routes = [
     path: '/signIn',
     name: 'signIn',
     component: () => import('@/views/user/Member/SignIn.vue')
-  } 
+  },
+  {
+    path: '/adminMainBoard',
+    name: 'adminMainBoard',
+    component: () => import('@/views/admin/AdminMainBoard.vue')
+  },
+  {
+    path: '/adminUserList',
+    name: 'adminUserList',
+    component: () => import('@/views/admin/user/AdminUserList.vue')
+  },
+  {
+    path: '/adminUserForm',
+    name: 'adminUserForm',
+    component: () => import('@/views/admin/user/AdminUserForm.vue')
+  },
+  {
+    path: '/adminBoardList',
+    name: 'adminBoardList',
+    component: () => import('@/views/admin/board/AdminBoardList.vue')
+  },
+  {
+    path: '/adminBoardForm',
+    name: 'adminBoardForm',
+    component: () => import('@/views/admin/board/AdminBoardForm.vue')
+  },
+  {
+    path: '/adminProductList',
+    name: 'adminProductList',
+    component: () => import('@/views/admin/product/AdminProductList.vue')
+  },
+  {
+    path: '/adminProductForm',
+    name: 'adminProductForm',
+    component: () => import('@/views/admin/product/AdminProductForm.vue')
+  },
+  {
+    path: '/adminProductCommentList',
+    name: 'adminProductCommentList',
+    component: () => import('@/views/admin/comment/AdminProductCommentList.vue')
+  },
+  {
+    path: '/adminBoardCommentList',
+    name: 'adminBoardCommentList',
+    component: () => import('@/views/admin/comment/AdminBoardCommentList.vue')
+  }   
 ]
 
 const router = new VueRouter({

@@ -6,15 +6,15 @@
             </div>
             <div class="col-10 area2">
                 <div class="container area">
-                    <h3 class="text-center mt-5">User List</h3>
+                    <h3 class="text-center mt-5">Board List</h3>
                     <!-- search s -->
                     <div class="row mt-5 mb-5">
                         <div class="col-4 mb-2"></div>
                         <div class="col-2 mb-2">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>:: 선택 ::</option>
-                                <option value="1">등록일</option>
-                                <option value="2">생년월일</option>
+                                <option value="1">작성일</option>
+                                <option value="2">수정일</option>
                             </select>
                         </div>
                         <div class="col-3 mb-2">
@@ -29,7 +29,9 @@
                                 <option selected>:: 선택 ::</option>
                                 <option value="1">이름</option>
                                 <option value="2">아이디</option>
-                                <option value="3">이메일</option>
+                                <option value="3">카테고리</option>
+                                <option value="4">제목</option>
+                                <option value="5">내용</option>
                             </select>
                         </div>
                         <div class="col-3">
@@ -50,14 +52,13 @@
                                         <input class="check" type="checkbox" name="check" onclick="selectAll(this)">
                                     </th>
                                     <th scope="col">NO</th>
-                                    <th scope="col">이름</th>
                                     <th scope="col">아이디</th>
-                                    <th scope="col">생년월일</th>
-                                    <th scope="col">핸드폰</th>
-                                    <th scope="col">이메일</th>
-                                    <th scope="col">성별</th>
+                                    <th scope="col">카테고리</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">내용</th>
                                     <th scope="col">삭제여부</th>
-                                    <th scope="col">가입일</th>
+                                    <th scope="col">작성일</th>
+                                    <th scope="col">수정일</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
@@ -66,70 +67,65 @@
                                         <input class="check" type="checkbox" name="check">
                                     </td>
                                     <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
                                     <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
+                                    <td>{{ category }}</td>
+                                    <td>{{ title }}</td>
+                                    <td>{{ content }}</td>
                                     <td>{{ delNy }}</td>
                                     <td>{{ regDate }}</td>
+                                    <td>{{ modDate }}</td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
                                     <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
                                     <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
+                                    <td>{{ category }}</td>
+                                    <td>{{ title }}</td>
+                                    <td>{{ content }}</td>
                                     <td>{{ delNy }}</td>
                                     <td>{{ regDate }}</td>
+                                    <td>{{ modDate }}</td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
                                     <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
                                     <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
+                                    <td>{{ category }}</td>
+                                    <td>{{ title }}</td>
+                                    <td>{{ content }}</td>
                                     <td>{{ delNy }}</td>
                                     <td>{{ regDate }}</td>
+                                    <td>{{ modDate }}</td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
                                     <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
                                     <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
+                                    <td>{{ category }}</td>
+                                    <td>{{ title }}</td>
+                                    <td>{{ content }}</td>
                                     <td>{{ delNy }}</td>
                                     <td>{{ regDate }}</td>
+                                    <td>{{ modDate }}</td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
                                     <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
                                     <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
+                                    <td>{{ category }}</td>
+                                    <td>{{ title }}</td>
+                                    <td>{{ content }}</td>
                                     <td>{{ delNy }}</td>
                                     <td>{{ regDate }}</td>
+                                    <td>{{ modDate }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -141,7 +137,7 @@
                             <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i> 삭제하기</button>
                         </div>
                         <div class="col-10 text-end">
-                            <button class="btn btn-success" type="button"><i class="fa-solid fa-notes-medical"></i> 등록하기</button>
+                            <button class="btn btn-success" type="button"><i class="fa-solid fa-notes-medical"></i> 작성하기</button>
                         </div>
                     </div>
                     <!-- button e -->
@@ -201,14 +197,13 @@ export default {
     data() {
         return{
             number: 1,
-            name: '이름',
             id: '아이디',
-            dob: '1990-01-01',
-            phone: '010-1234-1234',
-            email: 'example@example.com',
-            gender: '여성',
+            category: '카테고리',
+            title: '제목',
+            content: '내용입니다~~~~~~~~~',
             delNy: 'No',
-            regDate: '2020-10-10 10:00:00'
+            regDate: '2020-10-10 10:00:00',
+            modDate: '2020-10-10 10:00:10'
         }
     }
 }

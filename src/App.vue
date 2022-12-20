@@ -13,9 +13,10 @@
                   <router-link to="/">Home</router-link>
                   <router-link to="/boardList">Board</router-link>
                   <router-link to="/productList">Product</router-link>
-                  <router-link to="/memberLogin">Login</router-link>
+                  <router-link to="/adminUserList">admin</router-link>
                 </ul>
                 <form class="d-flex">
+                  <router-link to="/memberLogin"><button type="button" class="btn btn-outline-secondary">Login</button></router-link>
                   <router-link to="/signIn"><button type="button" class="btn btn-outline-dark">Sign Up</button></router-link>
                 </form>
                 </div>
