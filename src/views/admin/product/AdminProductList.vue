@@ -134,7 +134,9 @@
                             <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i> 삭제하기</button>
                         </div>
                         <div class="col-10 text-end">
-                            <button class="btn btn-success" type="button"><i class="fa-solid fa-notes-medical"></i> 등록하기</button>
+                            <router-link to="/adminProductForm">
+                                <button class="btn btn-success" type="button"><i class="fa-solid fa-notes-medical"></i> 등록하기</button>
+                            </router-link>
                         </div>
                     </div>
                     <!-- button e -->

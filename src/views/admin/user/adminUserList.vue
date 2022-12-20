@@ -12,7 +12,7 @@
                         <div class="col-4 mb-2"></div>
                         <div class="col-2 mb-2">
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>:: 선택 ::</option>
+                                <option selected>:: 검색 조건 ::</option>
                                 <option value="1">등록일</option>
                                 <option value="2">생년월일</option>
                             </select>
@@ -26,7 +26,7 @@
                         <div class="col-4"></div>
                         <div class="col-2">
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>:: 선택 ::</option>
+                                <option selected>:: 검색 조건 ::</option>
                                 <option value="1">이름</option>
                                 <option value="2">아이디</option>
                                 <option value="3">이메일</option>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-3 text-start">
                             <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-magnifying-glass"></i> Search</button>&nbsp;
-                            <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-rotate-left"></i> </button>
                         </div>
                     </div>
                     <!-- search e -->
@@ -47,7 +47,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input class="check" type="checkbox" name="check" onclick="selectAll(this)">
+                                        <input class="check" type="checkbox">
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
@@ -63,7 +63,7 @@
                             <tbody class="text-center">
                                 <tr>
                                     <td>
-                                        <input class="check" type="checkbox" name="check">
+                                        <input class="check" type="checkbox">
                                     </td>
                                     <th scope="row">{{ number }}</th>
                                     <td><router-link to="/boardView">{{ name }}</router-link></td>
@@ -77,7 +77,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input class="check" type="checkbox" name="check">
+                                        <input class="check" type="checkbox">
                                     </td>
                                     <th scope="row">{{ number }}</th>
                                     <td><router-link to="/boardView">{{ name }}</router-link></td>
@@ -141,7 +141,9 @@
                             <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i> 삭제하기</button>
                         </div>
                         <div class="col-10 text-end">
-                            <button class="btn btn-success" type="button"><i class="fa-solid fa-notes-medical"></i> 등록하기</button>
+                            <router-link to="/adminUserForm">
+                                <button class="btn btn-success" type="button"><i class="fa-solid fa-notes-medical"></i> 등록하기</button>
+                            </router-link>
                         </div>
                     </div>
                     <!-- button e -->
@@ -208,7 +210,7 @@ export default {
             email: 'example@example.com',
             gender: '여성',
             delNy: 'No',
-            regDate: '2020-10-10 10:00:00'
+            regDate: '2020-10-10 10:00:00',
         }
     }
 }
