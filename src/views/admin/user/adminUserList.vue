@@ -54,7 +54,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input type="checkbox" @click="select" v-model="select_all"> 
+                                        <input type="checkbox" @click="selectAll"> 
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
@@ -68,9 +68,9 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="user in users" :key="user.id">
+                                <tr v-for="user in users" :key="user">
                                     <td>
-                                        <input type="checkbox" v-model="selected" :value="user.id">
+                                        <input type="checkbox" v-model="selectedUsers">
                                     </td>
                                     <th scope="row">{{ user.number }}</th>
                                     <td><router-link to="/boardView">{{ user.name }}</router-link></td>
@@ -153,21 +153,12 @@ export default {
     }, 
     data() {
         return{
-            // number: 1,
-            // name: '이름',
-            // id: '아이디',
-            // dob: '1990-01-01',
-            // phone: '010-1234-1234',
-            // email: 'example@example.com',
-            // gender: '여성',
-            // delNy: 'No',
-            // regDate: '2020-10-10 10:00:00',
             users: [ 
-            { number: 1, name: "Shad", user_id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00"}, 
-            { number: 2, name: "Duane", user_id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
-            { number: 3, name: "Myah", user_id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
-            { number: 4, name: "Kamron", user_id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
-            { number: 5, name: "Brendon", user_id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }
+            { number: 1, name: "Shad", user_id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+            { number: 2, name: "Duane", user_id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+            { number: 3, name: "Myah", user_id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+            { number: 4, name: "Kamron", user_id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+            { number: 5, name: "Brendon", user_id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}
         ],
         select_all: false,
         selected: [],
@@ -176,6 +167,7 @@ export default {
     methods: {
         select(){
             this.selected = [];
+
             if(!this.select_all){
                 
                 for(let i in this.data){

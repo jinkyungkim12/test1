@@ -23,7 +23,7 @@
                 </section>
             </article>
             <div class="col text-center mt-5 mb-5">
-                <button class="btn btn-outline-success rounded-5 btn-lg" type="button">Like <i class="fa-solid fa-thumbs-up"></i></button>
+                <!-- <button class="btn btn-outline-success rounded-5 btn-lg" type="button">Like <i class="fa-solid fa-thumbs-up"></i></button> -->
             </div>
         </div>
         <BoardComments />
