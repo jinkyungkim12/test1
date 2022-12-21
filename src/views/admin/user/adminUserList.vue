@@ -73,7 +73,7 @@
                                         <input class="check" type="checkbox" :value="user.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ user.number }}</th>
-                                    <td><router-link to="/boardView">{{ user.name }}</router-link></td>
+                                    <td><router-link to="/adminUserForm">{{ user.name }}</router-link></td>
                                     <td>{{ user.user_id }}</td>
                                     <td>{{ user.dob }}</td>
                                     <td>{{ user.phone }}</td>

@@ -73,7 +73,7 @@
                                         <input class="check" type="checkbox" :value="comment.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ comment.number }}</th>
-                                    <td><router-link to="/boardView">{{ comment.name }}</router-link></td>
+                                    <td>{{ comment.name }}</td>
                                     <td>{{ comment.user_id }}</td>
                                     <td>{{ comment.category }}</td>
                                     <td>{{ comment.content }}</td>
