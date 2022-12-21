@@ -49,7 +49,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input class="check" type="checkbox" name="check" onclick="selectAll(this)">
+                                        <input class="check" type="checkbox" v-model="select_all">
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">아이디</th>
@@ -62,12 +62,12 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="post in board" :key="post.index">
+                                <tr v-for="post in board" :key="post.id">
                                     <td>
-                                        <input class="check" type="checkbox" name="check">
+                                        <input class="check" type="checkbox" :value="post.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ post.number }}</th>
-                                    <td>{{ post.id }}</td>
+                                    <td>{{ post.user_id }}</td>
                                     <td>{{ post.category }}</td>
                                     <td>{{ post.title }}</td>
                                     <td>{{ post.content }}</td>
@@ -150,7 +150,7 @@ export default {
             board: [
                 {
                     number: 1,
-                    id: '아이디1',
+                    user_id: '아이디1',
                     category: '카테고리',
                     title: '제목',
                     content: '내용입니다~~~~~~~~~',
@@ -160,7 +160,7 @@ export default {
                 },
                 {
                     number: 2,
-                    id: '아이디2',
+                    user_id: '아이디2',
                     category: '카테고리',
                     title: '제목',
                     content: '내용입니다~~~~~~~~~',
@@ -170,7 +170,7 @@ export default {
                 },
                 {
                     number: 3,
-                    id: '아이디3',
+                    user_id: '아이디3',
                     category: '카테고리',
                     title: '제목',
                     content: '내용입니다~~~~~~~~~',
@@ -180,7 +180,7 @@ export default {
                 },
                 {
                     number: 4,
-                    id: '아이디4',
+                    user_id: '아이디4',
                     category: '카테고리',
                     title: '제목',
                     content: '내용입니다~~~~~~~~~',
@@ -190,7 +190,7 @@ export default {
                 },
                 {
                     number: 5,
-                    id: '아이디5',
+                    user_id: '아이디5',
                     category: '카테고리',
                     title: '제목',
                     content: '내용입니다~~~~~~~~~',
@@ -199,7 +199,8 @@ export default {
                     modDate: '2020-10-10 10:00:10'
                 },
 
-            ]
+            ],
+            select_all: false,
             
         }
     }
@@ -228,5 +229,8 @@ export default {
     --bs-pagination-active-bg: #c6e4be;
     --bs-pagination-active-border-color: #c6e4be;
     justify-content: center;
+    }
+    .check {
+        accent-color: #198754;
     }
 </style>

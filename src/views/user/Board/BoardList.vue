@@ -37,7 +37,7 @@
                 <thead>
                     <tr class="table-dark text-white text-center">
                         <th scope="col">
-                            <input class="check" type="checkbox" name="check" onclick="selectAll(this)">
+                            <input class="check" type="checkbox" v-model="select_all">
                         </th>
                         <th scope="col">NO</th>
                         <th scope="col">아이디</th>
@@ -47,9 +47,9 @@
                     </tr>
                 </thead>
                 <tbody class="text-center">
-                    <tr v-for="post in board" :key="post.index">
+                    <tr v-for="post in board" :key="post.id">
                         <td>
-                            <input class="check" type="checkbox" name="check">
+                            <input class="check" type="checkbox" :value="post.id" :checked="select_all">
                         </td>
                         <th scope="row">{{ post.number }}</th>
                         <td><router-link to="/boardView">{{ post.memberId }}</router-link></td>
@@ -125,9 +125,12 @@ export default{
                     contents: '내용은 다음과 같습니다.',
                     regDate: '2022-01-01 10:10:10'
                 },
-            ]
-            
+            ],
+            select_all: false,
         }
+    },
+    methods: {
+        
     }
 }
 </script>
@@ -137,16 +140,19 @@ export default{
         width: 97%;
     }
     .pagination {
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem #fcc4a361;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem #c6e4be;
     --bs-pagination-color: black;
-    --bs-pagination-hover-color: #f87320;
-    --bs-pagination-focus-color: #f87320;
-    --bs-pagination-focus-bg: #FCC4A3;
-    --bs-pagination-active-bg: #FCC4A3;
-    --bs-pagination-active-border-color: #FCC4A3;
+    --bs-pagination-hover-color: #222222;
+    --bs-pagination-focus-color: #222222;
+    --bs-pagination-focus-bg: #c6e4be;
+    --bs-pagination-active-bg: #c6e4be;
+    --bs-pagination-active-border-color: #c6e4be;
     justify-content: center;
     }
     a{
         color: black;
+    }
+    .check {
+        accent-color: #198754;
     }
 </style>

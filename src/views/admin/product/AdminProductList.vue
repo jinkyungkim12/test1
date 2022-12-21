@@ -53,7 +53,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input class="check" type="checkbox" name="check" @click="selectAll(this)">
+                                        <input class="check" type="checkbox" v-model="select_all">
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">상품명</th>
@@ -66,9 +66,9 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="product in products" :key="product.index">
+                                <tr v-for="product in products" :key="product.id">
                                     <td>
-                                        <input class="check" type="checkbox" name="check">
+                                        <input class="check" type="checkbox" :value="product.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ product.number }}</th>
                                     <td>{{  product.pName }}</td>
@@ -202,9 +202,9 @@ export default {
                     regDate: '2020-10-10 10:00:00',
                     modDate: '2020-10-10 10:00:10'
                 }
-            ]
+            ],
+            select_all: false,
             
-           
         }
     }
 }
@@ -232,5 +232,8 @@ export default {
     --bs-pagination-active-bg: #c6e4be;
     --bs-pagination-active-border-color: #c6e4be;
     justify-content: center;
+    }
+    .check {
+        accent-color: #198754;
     }
 </style>

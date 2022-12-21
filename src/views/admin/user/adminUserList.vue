@@ -54,7 +54,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input type="checkbox" @click="selectAll"> 
+                                        <input class="check" type="checkbox" v-model="select_all"> 
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
@@ -68,9 +68,9 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="user in users" :key="user">
+                                <tr v-for="user in users" :key="user.id">
                                     <td>
-                                        <input type="checkbox" v-model="selectedUsers">
+                                        <input class="check" type="checkbox" :value="user.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ user.number }}</th>
                                     <td><router-link to="/boardView">{{ user.name }}</router-link></td>
@@ -154,26 +154,13 @@ export default {
     data() {
         return{
             users: [ 
-            { number: 1, name: "Shad", user_id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-            { number: 2, name: "Duane", user_id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-            { number: 3, name: "Myah", user_id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-            { number: 4, name: "Kamron", user_id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-            { number: 5, name: "Brendon", user_id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}
-        ],
-        select_all: false,
-        selected: [],
-        }
-    },
-    methods: {
-        select(){
-            this.selected = [];
-
-            if(!this.select_all){
-                
-                for(let i in this.data){
-                    this.selected.push(this.data[i].id);
-                }
-            }
+                { number: 1, name: "Shad", user_id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 2, name: "Duane", user_id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 3, name: "Myah", user_id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 4, name: "Kamron", user_id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 5, name: "Brendon", user_id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}
+            ],
+            select_all: false,
         }
     }
 }
@@ -201,5 +188,8 @@ export default {
     --bs-pagination-active-bg: #c6e4be;
     --bs-pagination-active-border-color: #c6e4be;
     justify-content: center;
+    }
+    .check {
+        accent-color: #198754;
     }
 </style>

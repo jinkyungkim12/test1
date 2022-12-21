@@ -55,7 +55,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input class="check" type="checkbox" name="check" onclick="selectAll(this)">
+                                        <input class="check" type="checkbox" v-model="select_all">
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
@@ -68,13 +68,13 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="comment in comments" :key="comment.index">
+                                <tr v-for="comment in comments" :key="comment.id">
                                     <td>
-                                        <input class="check" type="checkbox" name="check">
+                                        <input class="check" type="checkbox" :value="comment.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ comment.number }}</th>
                                     <td><router-link to="/boardView">{{ comment.name }}</router-link></td>
-                                    <td>{{ comment.id }}</td>
+                                    <td>{{ comment.user_id }}</td>
                                     <td>{{ comment.category }}</td>
                                     <td>{{ comment.content }}</td>
                                     <td>{{ comment.delNy }}</td>
@@ -153,7 +153,7 @@ export default {
                 {
                     number: 1,
                     name: '이름',
-                    id: '아이디 1',
+                    user_id: '아이디 1',
                     category: '카테고리',
                     content: '댓글내용입니다~~~~',
                     delNy: 'no',
@@ -163,7 +163,7 @@ export default {
                 {
                     number: 2,
                     name: '이름',
-                    id: '아이디 2',
+                    user_id: '아이디 2',
                     category: '카테고리',
                     content: '댓글내용입니다~~~~',
                     delNy: 'no',
@@ -173,7 +173,7 @@ export default {
                 {
                     number: 3,
                     name: '이름',
-                    id: '아이디 3',
+                    user_id: '아이디 3',
                     category: '카테고리',
                     content: '댓글내용입니다~~~~',
                     delNy: 'no',
@@ -183,7 +183,7 @@ export default {
                 {
                     number: 4,
                     name: '이름',
-                    id: '아이디 4',
+                    user_id: '아이디 4',
                     category: '카테고리',
                     content: '댓글내용입니다~~~~',
                     delNy: 'no',
@@ -193,14 +193,15 @@ export default {
                 {
                     number: 5,
                     name: '이름',
-                    id: '아이디 5',
+                    user_id: '아이디 5',
                     category: '카테고리',
                     content: '댓글내용입니다~~~~',
                     delNy: 'no',
                     regDate: '2020-10-10 10:00:00',
                     modDate: '2020-10-10 10:00:10'
                 }
-            ]
+            ],
+            select_all: false,
         }
     }
 }
@@ -228,5 +229,8 @@ export default {
     --bs-pagination-active-bg: #c6e4be;
     --bs-pagination-active-border-color: #c6e4be;
     justify-content: center;
+    }
+    .check {
+        accent-color: #198754;
     }
 </style>
