@@ -54,7 +54,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input class="check" type="checkbox" @click="selectAll" v-model="allSelected"> 
+                                        <input type="checkbox" @click="select" v-model="select_all"> 
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
@@ -68,13 +68,13 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="user in users" :key="user.index">
+                                <tr v-for="user in users" :key="user.id">
                                     <td>
-                                        <input class="check" type="checkbox" v-model="userIndexs" @click="select" :value="user.index">
+                                        <input type="checkbox" v-model="selected" :value="user.id">
                                     </td>
                                     <th scope="row">{{ user.number }}</th>
                                     <td><router-link to="/boardView">{{ user.name }}</router-link></td>
-                                    <td>{{ user.id }}</td>
+                                    <td>{{ user.user_id }}</td>
                                     <td>{{ user.dob }}</td>
                                     <td>{{ user.phone }}</td>
                                     <td>{{ user.email }}</td>
@@ -163,23 +163,25 @@ export default {
             // delNy: 'No',
             // regDate: '2020-10-10 10:00:00',
             users: [ 
-            { number: 1, name: "Shad", id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00"}, 
-            { number: 2, name: "Duane", id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
-            { number: 3, name: "Myah", id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
-            { number: 4, name: "Kamron", id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
-            { number: 5, name: "Brendon", id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }
+            { number: 1, name: "Shad", user_id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00"}, 
+            { number: 2, name: "Duane", user_id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
+            { number: 3, name: "Myah", user_id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
+            { number: 4, name: "Kamron", user_id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
+            { number: 5, name: "Brendon", user_id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }
         ],
+        select_all: false,
         selected: [],
-        allSelected: false,
-        userIndexs: []
         }
     },
     methods: {
-        selectAll: function() {
-            this.userIndexs = [];
-        },
-        select: function() {
-            this.allSelected = true;
+        select(){
+            this.selected = [];
+            if(!this.select_all){
+                
+                for(let i in this.data){
+                    this.selected.push(this.data[i].id);
+                }
+            }
         }
     }
 }
