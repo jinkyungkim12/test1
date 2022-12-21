@@ -62,70 +62,18 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr>
+                                <tr v-for="post in board" :key="post.index">
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ title }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ title }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ title }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ title }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ title }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
+                                    <th scope="row">{{ post.number }}</th>
+                                    <td>{{ post.id }}</td>
+                                    <td>{{ post.category }}</td>
+                                    <td>{{ post.title }}</td>
+                                    <td>{{ post.content }}</td>
+                                    <td>{{ post.delNy }}</td>
+                                    <td>{{ post.regDate }}</td>
+                                    <td>{{ post.modDate }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -198,14 +146,61 @@ export default {
     }, 
     data() {
         return{
-            number: 1,
-            id: '아이디',
-            category: '카테고리',
-            title: '제목',
-            content: '내용입니다~~~~~~~~~',
-            delNy: 'No',
-            regDate: '2020-10-10 10:00:00',
-            modDate: '2020-10-10 10:00:10'
+            
+            board: [
+                {
+                    number: 1,
+                    id: '아이디1',
+                    category: '카테고리',
+                    title: '제목',
+                    content: '내용입니다~~~~~~~~~',
+                    delNy: 'No',
+                    regDate: '2020-10-10 11:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 2,
+                    id: '아이디2',
+                    category: '카테고리',
+                    title: '제목',
+                    content: '내용입니다~~~~~~~~~',
+                    delNy: 'No',
+                    regDate: '2020-10-10 12:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 3,
+                    id: '아이디3',
+                    category: '카테고리',
+                    title: '제목',
+                    content: '내용입니다~~~~~~~~~',
+                    delNy: 'No',
+                    regDate: '2020-10-10 13:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 4,
+                    id: '아이디4',
+                    category: '카테고리',
+                    title: '제목',
+                    content: '내용입니다~~~~~~~~~',
+                    delNy: 'No',
+                    regDate: '2020-10-10 14:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 5,
+                    id: '아이디5',
+                    category: '카테고리',
+                    title: '제목',
+                    content: '내용입니다~~~~~~~~~',
+                    delNy: 'No',
+                    regDate: '2020-10-10 15:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+
+            ]
+            
         }
     }
 }

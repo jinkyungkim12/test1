@@ -9,7 +9,14 @@
                     <h3 class="text-center mt-5">Product List</h3>
                     <!-- search s -->
                     <div class="row mt-5 mb-5">
-                        <div class="col-4 mb-2"></div>
+                        <div class="col-2 mb-2"></div>
+                        <div class="col-2 mb-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>:: 삭제여부 ::</option>
+                                <option value="1">N</option>
+                                <option value="2">Y</option>
+                            </select>
+                        </div>
                         <div class="col-2 mb-2">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>:: 선택 ::</option>
@@ -59,70 +66,18 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr>
+                                <tr v-for="product in products" :key="product.index">
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ pName }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ price }}</td>
-                                    <td>{{ discountRate }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ pName }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ price }}</td>
-                                    <td>{{ discountRate }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ pName }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ price }}</td>
-                                    <td>{{ discountRate }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ pName }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ price }}</td>
-                                    <td>{{ discountRate }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td>{{ pName }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ price }}</td>
-                                    <td>{{ discountRate }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
+                                    <th scope="row">{{ product.number }}</th>
+                                    <td>{{  product.pName }}</td>
+                                    <td>{{  product.category }}</td>
+                                    <td>{{  product.price }}</td>
+                                    <td>{{  product.discountRate }}</td>
+                                    <td>{{  product.delNy }}</td>
+                                    <td>{{  product.regDate }}</td>
+                                    <td>{{  product.modDate }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -195,14 +150,61 @@ export default {
     }, 
     data() {
         return{
-            number: 1,
-            pName: '상품명',
-            category: '카테고리',
-            price: '100,000',
-            discountRate: '30%',
-            delNy: 'No',
-            regDate: '2020-10-10 10:00:00',
-            modDate: '2020-10-10 10:00:10'
+            
+            products: [
+                {
+                    number: 1,
+                    pName: '상품명1',
+                    category: '카테고리',
+                    price: '100,000',
+                    discountRate: '10%',
+                    delNy: 'No',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 2,
+                    pName: '상품명2',
+                    category: '카테고리',
+                    price: '100,000',
+                    discountRate: '30%',
+                    delNy: 'No',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 3,
+                    pName: '상품명3',
+                    category: '카테고리',
+                    price: '100,000',
+                    discountRate: '40%',
+                    delNy: 'No',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 4,
+                    pName: '상품명4',
+                    category: '카테고리',
+                    price: '100,000',
+                    discountRate: '50%',
+                    delNy: 'No',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 5,
+                    pName: '상품명5',
+                    category: '카테고리',
+                    price: '100,000',
+                    discountRate: '20%',
+                    delNy: 'No',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                }
+            ]
+            
+           
         }
     }
 }

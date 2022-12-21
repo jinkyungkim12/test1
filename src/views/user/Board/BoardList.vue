@@ -36,7 +36,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr class="table-dark text-white text-center">
-                        <th scope="col" >
+                        <th scope="col">
                             <input class="check" type="checkbox" name="check" onclick="selectAll(this)">
                         </th>
                         <th scope="col">NO</th>
@@ -47,55 +47,15 @@
                     </tr>
                 </thead>
                 <tbody class="text-center">
-                    <tr>
+                    <tr v-for="post in board" :key="post.index">
                         <td>
                             <input class="check" type="checkbox" name="check">
                         </td>
-                        <th scope="row">{{ number }}</th>
-                        <td><router-link to="/boardView">{{ memberId }}</router-link></td>
-                        <td>{{ category }}</td>
-                        <td>{{ contents }}</td>
-                        <td>{{ regDate }}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="check" type="checkbox" name="check">
-                        </td>
-                        <th scope="row">{{ number }}</th>
-                        <td>{{ memberId }}</td>
-                        <td>{{ category }}</td>
-                        <td>{{ contents }}</td>
-                        <td>{{ regDate }}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="check" type="checkbox" name="check">
-                        </td>
-                        <th scope="row">{{ number }}</th>
-                        <td>{{ memberId }}</td>
-                        <td>{{ category }}</td>
-                        <td>{{ contents }}</td>
-                        <td>{{ regDate }}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="check" type="checkbox" name="check">
-                        </td>
-                        <th scope="row">{{ number }}</th>
-                        <td>{{ memberId }}</td>
-                        <td>{{ category }}</td>
-                        <td>{{ contents }}</td>
-                        <td>{{ regDate }}</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input class="check" type="checkbox" name="check">
-                        </td>
-                        <th scope="row">{{ number }}</th>
-                        <td>{{ memberId }}</td>
-                        <td>{{ category }}</td>
-                        <td>{{ contents }}</td>
-                        <td>{{ regDate }}</td>
+                        <th scope="row">{{ post.number }}</th>
+                        <td><router-link to="/boardView">{{ post.memberId }}</router-link></td>
+                        <td>{{ post.category }}</td>
+                        <td>{{ post.contents }}</td>
+                        <td>{{ post.regDate }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -129,11 +89,44 @@
 export default{
     data(){
         return {
-            number: 1,
-            memberId: '아이디',
-            category: '제목',
-            contents: '내용은 다음과 같습니다.',
-            regDate: '2022-01-01 10:10:10'
+            board: [
+                {
+                    number: 1,
+                    memberId: '아이디 1',
+                    category: '제목',
+                    contents: '내용은 다음과 같습니다.',
+                    regDate: '2022-01-01 10:10:10'
+                },
+                {
+                    number: 2,
+                    memberId: '아이디 2',
+                    category: '제목',
+                    contents: '내용은 다음과 같습니다.',
+                    regDate: '2022-01-01 10:10:10'
+                },
+                {
+                    number: 3,
+                    memberId: '아이디 3',
+                    category: '제목',
+                    contents: '내용은 다음과 같습니다.',
+                    regDate: '2022-01-01 10:10:10'
+                },
+                {
+                    number: 4,
+                    memberId: '아이디 4',
+                    category: '제목',
+                    contents: '내용은 다음과 같습니다.',
+                    regDate: '2022-01-01 10:10:10'
+                },
+                {
+                    number: 5,
+                    memberId: '아이디 5',
+                    category: '제목',
+                    contents: '내용은 다음과 같습니다.',
+                    regDate: '2022-01-01 10:10:10'
+                },
+            ]
+            
         }
     }
 }
@@ -141,7 +134,7 @@ export default{
 
 <style scoped>
     .table{
-        width: 99%;
+        width: 97%;
     }
     .pagination {
     --bs-pagination-focus-box-shadow: 0 0 0 0.25rem #fcc4a361;
@@ -152,5 +145,8 @@ export default{
     --bs-pagination-active-bg: #FCC4A3;
     --bs-pagination-active-border-color: #FCC4A3;
     justify-content: center;
+    }
+    a{
+        color: black;
     }
 </style>

@@ -9,7 +9,14 @@
                     <h3 class="text-center mt-5">User List</h3>
                     <!-- search s -->
                     <div class="row mt-5 mb-5">
-                        <div class="col-4 mb-2"></div>
+                        <div class="col-2 mb-2"></div>
+                        <div class="col-2 mb-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>:: 삭제여부 ::</option>
+                                <option value="1">N</option>
+                                <option value="2">Y</option>
+                            </select>
+                        </div>
                         <div class="col-2 mb-2">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>:: 검색 조건 ::</option>
@@ -47,7 +54,7 @@
                             <thead>
                                 <tr class="table-dark text-white text-center">
                                     <th scope="col" >
-                                        <input class="check" type="checkbox">
+                                        <input class="check" type="checkbox" @click="selectAll" v-model="allSelected"> 
                                     </th>
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
@@ -61,75 +68,19 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr>
+                                <tr v-for="user in users" :key="user.index">
                                     <td>
-                                        <input class="check" type="checkbox">
+                                        <input class="check" type="checkbox" v-model="userIndexs" @click="select" :value="user.index">
                                     </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ dob }}</td>
-                                    <td>{{ phone }}</td>
-                                    <td>{{ email }}</td>
-                                    <td>{{ gender }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
+                                    <th scope="row">{{ user.number }}</th>
+                                    <td><router-link to="/boardView">{{ user.name }}</router-link></td>
+                                    <td>{{ user.id }}</td>
+                                    <td>{{ user.dob }}</td>
+                                    <td>{{ user.phone }}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.gender }}</td>
+                                    <td>{{ user.delNy }}</td>
+                                    <td>{{ user.regDate }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -202,15 +153,33 @@ export default {
     }, 
     data() {
         return{
-            number: 1,
-            name: '이름',
-            id: '아이디',
-            dob: '1990-01-01',
-            phone: '010-1234-1234',
-            email: 'example@example.com',
-            gender: '여성',
-            delNy: 'No',
-            regDate: '2020-10-10 10:00:00',
+            // number: 1,
+            // name: '이름',
+            // id: '아이디',
+            // dob: '1990-01-01',
+            // phone: '010-1234-1234',
+            // email: 'example@example.com',
+            // gender: '여성',
+            // delNy: 'No',
+            // regDate: '2020-10-10 10:00:00',
+            users: [ 
+            { number: 1, name: "Shad", id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00"}, 
+            { number: 2, name: "Duane", id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
+            { number: 3, name: "Myah", id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
+            { number: 4, name: "Kamron", id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }, 
+            { number: 5, name: "Brendon", id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00" }
+        ],
+        selected: [],
+        allSelected: false,
+        userIndexs: []
+        }
+    },
+    methods: {
+        selectAll: function() {
+            this.userIndexs = [];
+        },
+        select: function() {
+            this.allSelected = true;
         }
     }
 }

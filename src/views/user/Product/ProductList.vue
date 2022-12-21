@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" v-for="product in products" :key="product.index">
                 <div class="card card-product card-plain shadow p-3 mb-5 bg-body rounded border border-0">
                     <div class="card-image">
                         <router-link to="/productView">
@@ -15,47 +15,11 @@
                         </router-link>
                         <div class="card-body">
                             <div class="card-description">
-                                <h5 class="card-title">{{ productName1 }}</h5>
-                                <p class="card-description">{{ productContents1 }}</p>
+                                <h5 class="card-title">{{ product.productName }}</h5>
+                                <p class="card-description">{{ product.productContents }}</p>
                             </div>
                             <div class="price">
-                                <s>{{ price1 }}</s> <span class="text-danger">{{ dcPrice1 }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-product card-plain shadow p-3 mb-5 bg-body rounded border border-0">
-                    <div class="card-image">
-                        <a href="#paper-kit">
-                            <img src="https://images.unsplash.com/photo-1493020258366-be3ead1b3027?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Rounded Image" class="img-fluid rounded img-responsive">
-                        </a>
-                        <div class="card-body">
-                            <div class="card-description">
-                                <h5 class="card-title">{{ productName2 }}</h5>
-                                <p class="card-description">{{ productContents2 }}</p>
-                            </div>
-                            <div class="price">
-                                <s>{{ price2 }}</s> <span class="text-danger">{{ dcPrice2 }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-product card-plain shadow p-3 mb-5 bg-body rounded border border-0">
-                    <div class="card-image">
-                        <a href="#paper-kit">
-                            <img src="https://images.unsplash.com/photo-1644953798828-a92178929505?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNvbXB1dGVyfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Rounded Image" class="img-fluid rounded img-responsive">
-                        </a>
-                        <div class="card-body">
-                            <div class="card-description">
-                                <h5 class="card-title">{{ productName3 }}</h5>
-                                <p class="card-description">{{ productContents3 }}</p>
-                            </div>
-                            <div class="price">
-                                <s>{{ price3 }}</s> <span class="text-danger">{{ dcPrice3 }}</span>
+                                <s>{{ product.price }}</s> <span class="text-danger">{{ product.dcPrice }}</span>
                             </div>
                         </div>
                     </div>
@@ -69,18 +33,26 @@
 export default{
     data(){
         return {
-            productName1: 'Laptop 1',
-            productContents1: 'This is a limited edition.',
-            price1: '100,000 원',
-            dcPrice1: '70,000 원',
-            productName2: 'Laptop 2',
-            productContents2: 'This is a limited edition.',
-            price2: '200,000 원',
-            dcPrice2: '180,000 원',
-            productName3: 'Tablets',
-            productContents3: 'This is a limited edition.',
-            price3: '300,000 원',
-            dcPrice3: '270,000 원',
+            products: [
+                {
+                    productName: 'Laptop',
+                    productContents: 'This is a limited edition.',
+                    price: '100,000 원',
+                    dcPrice: '70,000 원'
+                },
+                {
+                    productName: 'Laptop',
+                    productContents: 'This is a limited edition.',
+                    price: '100,000 원',
+                    dcPrice: '70,000 원'
+                },
+                {
+                    productName: 'Laptop',
+                    productContents: 'This is a limited edition.',
+                    price: '100,000 원',
+                    dcPrice: '70,000 원'
+                }
+            ]
         }
     }
 }

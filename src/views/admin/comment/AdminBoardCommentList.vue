@@ -9,7 +9,14 @@
                     <h3 class="text-center mt-5">Board Comment List</h3>
                     <!-- search s -->
                     <div class="row mt-5 mb-5">
-                        <div class="col-4 mb-2"></div>
+                        <div class="col-2 mb-2"></div>
+                        <div class="col-2 mb-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>:: 삭제여부 ::</option>
+                                <option value="1">N</option>
+                                <option value="2">Y</option>
+                            </select>
+                        </div>
                         <div class="col-2 mb-2">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>:: 선택 ::</option>
@@ -61,70 +68,18 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr>
+                                <tr v-for="comment in comments" :key="comment.index">
                                     <td>
                                         <input class="check" type="checkbox" name="check">
                                     </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="check" type="checkbox" name="check">
-                                    </td>
-                                    <th scope="row">{{ number }}</th>
-                                    <td><router-link to="/boardView">{{ name }}</router-link></td>
-                                    <td>{{ id }}</td>
-                                    <td>{{ category }}</td>
-                                    <td>{{ content }}</td>
-                                    <td>{{ delNy }}</td>
-                                    <td>{{ regDate }}</td>
-                                    <td>{{ modDate }}</td>
+                                    <th scope="row">{{ comment.number }}</th>
+                                    <td><router-link to="/boardView">{{ comment.name }}</router-link></td>
+                                    <td>{{ comment.id }}</td>
+                                    <td>{{ comment.category }}</td>
+                                    <td>{{ comment.content }}</td>
+                                    <td>{{ comment.delNy }}</td>
+                                    <td>{{ comment.regDate }}</td>
+                                    <td>{{ comment.modDate }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -194,14 +149,60 @@ export default {
     }, 
     data() {
         return{
-            number: 1,
-            name: '이름',
-            id: '아이디',
-            category: '카테고리',
-            content: '댓글내용입니다~~~~',
-            delNy: 'no',
-            regDate: '2020-10-10 10:00:00',
-            modDate: '2020-10-10 10:00:10',
+            comments: [
+                {
+                    number: 1,
+                    name: '김위드',
+                    id: '아이디',
+                    category: '카테고리',
+                    content: '댓글내용입니다~~~~',
+                    delNy: 'no',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 2,
+                    name: '김아이스',
+                    id: '아이디',
+                    category: '카테고리',
+                    content: '댓글내용입니다~~~~',
+                    delNy: 'no',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 3,
+                    name: '이름',
+                    id: '아이디',
+                    category: '카테고리',
+                    content: '댓글내용입니다~~~~',
+                    delNy: 'no',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 4,
+                    name: '이름',
+                    id: '아이디',
+                    category: '카테고리',
+                    content: '댓글내용입니다~~~~',
+                    delNy: 'no',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                },
+                {
+                    number: 5,
+                    name: '이름',
+                    id: '아이디',
+                    category: '카테고리',
+                    content: '댓글내용입니다~~~~',
+                    delNy: 'no',
+                    regDate: '2020-10-10 10:00:00',
+                    modDate: '2020-10-10 10:00:10'
+                }
+            ]
+
+            
         }
     }
 }
