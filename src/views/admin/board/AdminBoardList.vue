@@ -9,7 +9,14 @@
                     <h3 class="text-center mt-5">Board List</h3>
                     <!-- search s -->
                     <div class="row mt-5 mb-5">
-                        <div class="col-4 mb-2"></div>
+                        <div class="col-2 mb-2"></div>
+                        <div class="col-2 mb-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>:: 삭제여부 ::</option>
+                                <option value="1">N</option>
+                                <option value="2">Y</option>
+                            </select>
+                        </div>
                         <div class="col-2 mb-2">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>:: 선택 ::</option>
