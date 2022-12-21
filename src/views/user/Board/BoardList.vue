@@ -27,7 +27,7 @@
 
 		<div class="row mt-5 mb-3">
             <div class="col text-end">
-                <router-link to="/boardCreate"><button class="btn btn-dark"><i class="fa-solid fa-pencil"></i> 작성하기</button></router-link>
+                <router-link to="/boardCreate"><button class="btn btn-success"><i class="fa-solid fa-pencil"></i> 작성하기</button></router-link>
             </div>
         </div>
         

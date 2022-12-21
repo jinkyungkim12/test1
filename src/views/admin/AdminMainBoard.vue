@@ -17,10 +17,9 @@
                                             <div class="text-secondary text-uppercase h3">Total <br>user</div>
                                         </div>
                                         <div class="col-4">
-                                            <i class="fa-duotone fa-box-taped fa-4x text-gray-300"></i>
                                             <i class="fa-solid fa-people-group fa-4x text-gray-300"></i>
                                         </div>
-                                        <div class="h3 text-gray-800 mt-2 text-center"><b class="text-success">30</b> persons</div>
+                                        <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">30</b> persons</div>
                                     </div>
                                 </div>
                             </div>
@@ -33,10 +32,9 @@
                                             <div class="text-secondary text-uppercase h3">Total <br>post</div>
                                         </div>
                                         <div class="col-4">
-                                            <i class="fa-duotone fa-box-taped fa-4x text-gray-300"></i>
                                             <i class="fa-solid fa-file-pen fa-4x text-gray-300"></i>
                                         </div>
-                                        <div class="h3 text-gray-800 mt-2 text-center"><b class="text-success">40</b> posts</div>
+                                        <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">40</b> posts</div>
                                     </div>
                                 </div>
                             </div>
@@ -49,10 +47,9 @@
                                             <div class="text-secondary text-uppercase h3">Total <br> product</div>
                                         </div>
                                         <div class="col-4">
-                                            <i class="fa-duotone fa-box-taped fa-4x text-gray-300"></i>
                                             <i class="fa-solid fa-boxes-stacked fa-4x text-gray-300"></i>
                                         </div>
-                                        <div class="h3 text-gray-800 mt-2 text-center"><b class="text-success">50</b> products</div>
+                                        <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">50</b> products</div>
                                     </div>
                                 </div>
                             </div>
@@ -72,31 +69,31 @@
                                         <div class="col-3 text-end">
                                             <i class="fa-solid fa-square-check fa-2x text-success"></i>
                                         </div>
-                                        <div class="col-9"><h4 class="fw-semibold">A product</h4></div>
+                                        <div class="col-9"><h4>A product</h4></div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-3 text-end">
                                             <i class="fa-solid fa-square-check fa-2x text-success"></i>
                                         </div>
-                                        <div class="col-9"><h4 class="fw-semibold">B product</h4></div>
+                                        <div class="col-9"><h4>B product</h4></div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-3 text-end">
                                             <i class="fa-solid fa-square-check fa-2x text-success"></i>
                                         </div>
-                                        <div class="col-9"><h4 class="fw-semibold">C product</h4></div>
+                                        <div class="col-9"><h4>C product</h4></div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-3 text-end">
                                             <i class="fa-solid fa-square-check fa-2x text-success"></i>
                                         </div>
-                                        <div class="col-9"><h4 class="fw-semibold">D product</h4></div>
+                                        <div class="col-9"><h4>D product</h4></div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-3 text-end">
                                             <i class="fa-solid fa-square-check fa-2x text-success"></i>
                                         </div>
-                                        <div class="col-9"><h4 class="fw-semibold">E product</h4></div>
+                                        <div class="col-9"><h4>E product</h4></div>
                                     </div>
                                 </div>
                             </div>
