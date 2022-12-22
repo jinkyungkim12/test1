@@ -10,49 +10,55 @@
                     <div class="row mt-5">
                         <div class="col-1"></div>
                         <div class="col-3">
-                            <div class="card border-0 shadow h-100 py-2 rounded-5">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <div class="text-secondary text-uppercase h3">Total <br>user</div>
+                            <router-link to="/adminUserList">
+                                <div class="card border-0 shadow h-100 py-2 rounded-5">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="text-gray-300 text-uppercase h3">Total <br>user</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <i class="fa-solid fa-people-group fa-4x text-gray-300"></i>
+                                            </div>
+                                            <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">30</b> persons</div>
                                         </div>
-                                        <div class="col-4">
-                                            <i class="fa-solid fa-people-group fa-4x text-gray-300"></i>
-                                        </div>
-                                        <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">30</b> persons</div>
                                     </div>
                                 </div>
-                            </div>
+                            </router-link>
                         </div>
                         <div class="col-3">
-                            <div class="card border-0 shadow h-100 py-2 rounded-5">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <div class="text-secondary text-uppercase h3">Total <br>post</div>
+                            <router-link to="/adminBoardList">
+                                <div class="card border-0 shadow h-100 py-2 rounded-5">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="text-gray-300 text-uppercase h3">Total <br>post</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <i class="fa-solid fa-file-pen fa-4x text-gray-300"></i>
+                                            </div>
+                                            <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">40</b> posts</div>
                                         </div>
-                                        <div class="col-4">
-                                            <i class="fa-solid fa-file-pen fa-4x text-gray-300"></i>
-                                        </div>
-                                        <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">40</b> posts</div>
                                     </div>
                                 </div>
-                            </div>
+                            </router-link>
                         </div>
                         <div class="col-3">
-                            <div class="card border-0 shadow h-100 py-2 rounded-5">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <div class="text-secondary text-uppercase h3">Total <br> product</div>
+                            <router-link to="/adminProductList">
+                                <div class="card border-0 shadow h-100 py-2 rounded-5">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="text-gray-300 text-uppercase h3">Total <br> product</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <i class="fa-solid fa-boxes-stacked fa-4x text-gray-300"></i>
+                                            </div>
+                                            <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">50</b> products</div>
                                         </div>
-                                        <div class="col-4">
-                                            <i class="fa-solid fa-boxes-stacked fa-4x text-gray-300"></i>
-                                        </div>
-                                        <div class="h4 text-gray-800 mt-4 text-center"><b class="text-success">50</b> products</div>
                                     </div>
                                 </div>
-                            </div>
+                            </router-link>
                         </div>
                         <div class="col-2"></div>
                     </div>
