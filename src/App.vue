@@ -4,22 +4,22 @@
     <div class="mainHeader">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <router-link to="/"><i class="fa-solid fa-w text-warning"></i> WithNetWorks</router-link>
+                <div class="tab"><router-link to="/"><i class="fa-solid fa-w text-warning"></i> WithNetWorks</router-link></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <router-link to="/">Home</router-link>
-                  <router-link to="/boardList">Board</router-link>
-                  <router-link to="/productList">Product</router-link>
-                  <router-link to="/adminMainBoard">Admin</router-link>
-                </ul>
+                  <ul class="navbar-nav">
+                    <li class="nav-item"><router-link to="/">Home</router-link></li>
+                    <li class="nav-item"><router-link to="/boardList">Board</router-link></li>
+                    <li class="nav-item"><router-link to="/productList">Product</router-link></li>
+                    <li class="nav-item"><router-link to="/adminMainBoard">Admin</router-link></li>
+                  </ul>
+                </div>
                 <form class="d-flex">
-                  <router-link to="/memberLogin"><button type="button" class="btn btn-outline-secondary">Login</button></router-link>
+                  <router-link to="/memberLogin"><button type="button" class="btn btn-outline-secondary">Login</button></router-link>&nbsp;
                   <router-link to="/signUp"><button type="button" class="btn btn-outline-dark">Sign Up</button></router-link>
                 </form>
-                </div>
             </div>
         </nav>
     </div>
@@ -69,6 +69,11 @@ a:hover{
 
 a {
     text-decoration: none;
+  }
+  .nav-item{
     padding-right: 20px;
-}
+  }
+  .tab{
+    padding-right: 20px;
+  }
 </style>

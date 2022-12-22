@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white rounded-3 shadow-lg pt-1 mb-5 mb-lg-0 sticky-top">
+    <div class="bg-white rounded-3 shadow-lg pt-1 mt-5 mb-5 mb-lg-0 sticky-top">
         <ul class="list-unstyled text-center">
             <li class="mt-3 mb-3"><router-link to="/adminMainBoard"><b>Main Board</b></router-link></li>
             <hr>

@@ -208,9 +208,10 @@ export default{
         
         },
         clear(){
-            document.getElementById('zipcode').value = ' ';
-            document.getElementById("address").value = ' ';
-            document.getElementById("addressDetail").value =' ';
+            document.getElementById('zipcode').value = '';
+            document.getElementById("address").value = '';
+            document.getElementById("addressDetail").value ='';
+            document.getElementById("addressExtra").value ='';
         }
     },
 }

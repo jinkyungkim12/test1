@@ -36,7 +36,8 @@
                                 <option selected>:: 검색 조건 ::</option>
                                 <option value="1">이름</option>
                                 <option value="2">아이디</option>
-                                <option value="3">이메일</option>
+                                <option value="3">닉네임</option>
+                                <option value="4">이메일</option>
                             </select>
                         </div>
                         <div class="col-3">
@@ -59,6 +60,7 @@
                                     <th scope="col">NO</th>
                                     <th scope="col">이름</th>
                                     <th scope="col">아이디</th>
+                                    <th scope="col">닉네임</th>
                                     <th scope="col">생년월일</th>
                                     <th scope="col">핸드폰</th>
                                     <th scope="col">이메일</th>
@@ -75,6 +77,7 @@
                                     <th scope="row">{{ user.number }}</th>
                                     <td><router-link to="/adminUserView">{{ user.name }}</router-link></td>
                                     <td>{{ user.user_id }}</td>
+                                    <td>{{ user.nickname }}</td>
                                     <td>{{ user.dob }}</td>
                                     <td>{{ user.phone }}</td>
                                     <td>{{ user.email }}</td>
@@ -154,11 +157,11 @@ export default {
     data() {
         return{
             users: [ 
-                { number: 1, name: "Shad", user_id: "Shad", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-                { number: 2, name: "Duane", user_id: "Duane", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-                { number: 3, name: "Myah", user_id: "Myah", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-                { number: 4, name: "Kamron", user_id: "Kamron", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
-                { number: 5, name: "Brendon", user_id: "Brendon", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}
+                { number: 1, name: "Shad", user_id: "Shad", nickname: "nickname1", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 2, name: "Duane", user_id: "Duane", nickname: "nickname2", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 3, name: "Myah", user_id: "Myah", nickname: "nickname3", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 4, name: "Kamron", user_id: "Kamron", nickname: "nickname4", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}, 
+                { number: 5, name: "Brendon", user_id: "Brendon", nickname: "nickname5", dob : "1990-01-02", phone: "010-1234-1234", email: "example@example.com", gender: "여성", delNy: "No", regDate: "2020-10-10 10:00:00", selected: false}
             ],
             select_all: false,
         }
