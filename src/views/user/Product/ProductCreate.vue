@@ -39,7 +39,7 @@
         </div>
         <div class="row justify-content-center mt-5 mb-5">
             <div class="col-3">
-                <button type="button" class="btn btn-dark"><i class="fa-solid fa-pencil"></i> 작성하기</button>
+                <button type="button" class="btn btn-dark"><i class="fa-solid fa-pencil"></i> 등록하기</button>
             </div>
             <div class="col-3">
                 <router-link to="/productList"><button type="button" class="btn btn-secondary"><i class="fa-solid fa-delete-left"></i> 취소하기</button></router-link>

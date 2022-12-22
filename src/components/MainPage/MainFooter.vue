@@ -14,8 +14,9 @@
                         <i class="fa-solid fa-w text-warning"></i> WithNetWorks
                     </h6>
                     <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                        ㈜위드네트웍스는 고객의 가치를 위해<br> 고민하는 보안 전문 기업으로서, 
+                        컨설팅부터<br> 구축 및 유지보수 서비스까지 제공하며,<br> 고객의 입장에 선
+                         Total 컨설팅을 통해 ICT 혁신을 지지하는 기업입니다.
                     </p>
                 </div>
                 <!-- Grid column -->
