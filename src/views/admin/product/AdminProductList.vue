@@ -71,7 +71,7 @@
                                         <input class="check" type="checkbox" :value="product.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ product.number }}</th>
-                                    <td><router-link to="/adminProductForm">{{  product.pName }}</router-link></td>
+                                    <td><router-link to="/adminProductView">{{  product.pName }}</router-link></td>
                                     <td>{{  product.category }}</td>
                                     <td>{{  product.price }}</td>
                                     <td>{{  product.discountRate }}</td>

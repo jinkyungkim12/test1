@@ -74,7 +74,7 @@
                                         <input class="check" type="checkbox" :value="post.id" :checked="select_all">
                                     </td>
                                     <th scope="row">{{ post.number }}</th>
-                                    <td><router-link to="/adminBoardForm">{{ post.user_id }}</router-link></td>
+                                    <td><router-link to="/adminBoardView">{{ post.user_id }}</router-link></td>
                                     <td>{{ post.category }}</td>
                                     <td>{{ post.title }}</td>
                                     <td>{{ post.content }}</td>

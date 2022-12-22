@@ -89,6 +89,11 @@ const routes = [
     component: () => import('@/views/admin/user/AdminUserForm.vue')
   },
   {
+    path: '/adminUserView',
+    name: 'adminUserView',
+    component: () => import('@/views/admin/user/AdminUserView.vue')
+  },
+  {
     path: '/adminBoardList',
     name: 'adminBoardList',
     component: () => import('@/views/admin/board/AdminBoardList.vue')
@@ -99,6 +104,11 @@ const routes = [
     component: () => import('@/views/admin/board/AdminBoardForm.vue')
   },
   {
+    path: '/adminBoardView',
+    name: 'adminBoardView',
+    component: () => import('@/views/admin/board/AdminBoardView.vue')
+  },
+  {
     path: '/adminProductList',
     name: 'adminProductList',
     component: () => import('@/views/admin/product/AdminProductList.vue')
@@ -107,6 +117,11 @@ const routes = [
     path: '/adminProductForm',
     name: 'adminProductForm',
     component: () => import('@/views/admin/product/AdminProductForm.vue')
+  },
+  {
+    path: '/adminProductView',
+    name: 'adminProductView',
+    component: () => import('@/views/admin/product/AdminProductView.vue')
   },
   {
     path: '/adminProductCommentList',
