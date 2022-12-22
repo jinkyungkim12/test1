@@ -69,9 +69,9 @@ const routes = [
     component: () => import('@/views/user/Product/ProductCreate.vue')
   },
   {
-    path: '/signIn',
-    name: 'signIn',
-    component: () => import('@/views/user/Member/SignIn.vue')
+    path: '/signUp',
+    name: 'signUp',
+    component: () => import('@/views/user/Member/SignUp.vue')
   },
   {
     path: '/adminMainBoard',

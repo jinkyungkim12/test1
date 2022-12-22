@@ -143,7 +143,7 @@
                                 </div>
                             </div>
                             <div class="row justify-content-center mt-5">
-                                <button type="button" class="btn btn-dark loginButton">Sign Up</button>
+                                <router-link to="/"><button type="button" class="btn btn-dark loginButton">Sign Up</button></router-link>
                             </div>
                         </div>
                     </div>
@@ -218,7 +218,7 @@ export default{
 
 <style scoped>
     .loginButton{
-        width: 97%;
+        width: 100%;
     }
     .img-fluid{
         height: 100%;

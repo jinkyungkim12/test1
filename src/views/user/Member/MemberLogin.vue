@@ -14,7 +14,7 @@
               <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="password">
             </div>
             <div class="row justify-content-center mt-5">
-              <button type="button" class="btn btn-dark loginButton">Login</button>
+              <router-link to="/"><button type="button" class="btn btn-dark loginButton">Login</button></router-link>
             </div>
           </div>
         </div>
@@ -41,6 +41,6 @@ export default{
     width: 50%;
   }
   .loginButton{
-    width: 95%;
+    width: 100%;
   }
 </style>
